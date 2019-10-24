@@ -23,10 +23,24 @@ app.get("/posts/submit", (req, res) => {
 })
 
 app.get("/posts", (req, res) => {
-  let templateVars = {posts : postDatabase};
+  let array = descendingOrder(postDatabase);
+  let length = array.length;
+  let templateVars = {posts : array, length: length};
   res.render("index", templateVars)
 })
 
+
+
+// function
+
+let descendingOrder = function (obj){
+  let array = Object.keys(obj).map(function(key){
+      return [key, obj[key]]
+  })
+  return b = array.reverse();
+  
+
+}
 
 
 
