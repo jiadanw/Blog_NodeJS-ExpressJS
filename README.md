@@ -16,4 +16,4 @@
 
 - Install all dependencies (using the `npm install` command).
 - Run npm run local to get the server up and running
-- Go to localhost:3000
+- Go to localhost:3000/posts
